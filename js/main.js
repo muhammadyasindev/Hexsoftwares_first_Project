@@ -1,34 +1,4 @@
-const sampleBlogs = [
-  {
-    id: "sample-1",
-    title: "The joy of starting small",
-    author: "Maya Chen",
-    category: "Ideas",
-    content:
-      "Big projects become less frightening when we give ourselves permission to begin with one small, useful step.",
-    date: "2026-08-28",
-  },
-  {
-    id: "sample-2",
-    title: "Notes from a slower morning",
-    author: "Noah Williams",
-    category: "Lifestyle",
-    content:
-      "A quiet morning is not empty time. It is room to notice what the hurried version of us usually misses.",
-    date: "2026-08-24",
-  },
-  {
-    id: "sample-3",
-    title: "Learning in public",
-    author: "Ava Patel",
-    category: "Technology",
-    content:
-      "Sharing the messy middle of learning can be more helpful than presenting only a polished final result.",
-    date: "2026-08-19",
-  },
-];
-
-// Read only saved posts. The home page adds samples when this list is empty.
+// Read only saved posts.
 function getBlogs() {
   try {
     const savedBlogs = localStorage.getItem("blogPosts");
@@ -67,7 +37,7 @@ function deleteBlog(id) {
 }
 
 function getBlogById(id) {
-  return [...getBlogs(), ...sampleBlogs].find((blog) => blog.id === id);
+  return getBlogs().find((blog) => blog.id === id);
 }
 
 function escapeHTML(value) {
@@ -141,8 +111,7 @@ if (menuButton && navigation) {
 const latestPosts = document.querySelector("#latest-posts");
 if (latestPosts) {
   const blogs = getBlogs();
-  const postsToShow = blogs.length > 0 ? blogs : sampleBlogs;
-  latestPosts.innerHTML = postsToShow
+  latestPosts.innerHTML = blogs
     .filter(
       (blog) =>
         blog &&
@@ -151,7 +120,7 @@ if (latestPosts) {
     )
     .slice(0, 3)
     .map((blog) => blogCard(blog))
-    .join("");
+    .join("") || '<p class="empty-state">No blog posts available yet.</p>';
 }
 
 const contactForm = document.querySelector("#contact-form");

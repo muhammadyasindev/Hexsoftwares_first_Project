@@ -369,11 +369,19 @@ select {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.6rem;
   font-size: 1.35rem;
   letter-spacing: 0.01em;
 }
-.brand-mark,
+.brand-mark {
+  display: inline-grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  place-items: center;
+  border-radius: 0;
+  background: transparent;
+  font-size: 1rem;
+}
 .footer-brand span {
   display: inline-grid;
   width: 2rem;
@@ -383,6 +391,12 @@ select {
   color: #fff;
   background: var(--primary-color);
   font-size: 1rem;
+}
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .site-nav {
   gap: 1.5rem;
@@ -796,6 +810,21 @@ h2 {
   font-weight: 700;
   text-decoration: none;
 }
+.footer-brand span {
+  display: inline-flex;
+  width: 3.25rem;
+  height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  background: transparent;
+}
+.footer-brand img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .footer-grid h3 {
   margin: 0 0 0.6rem;
   color: #fff;
@@ -812,22 +841,34 @@ h2 {
 }
 .social-links {
   display: flex;
-  gap: 0.55rem;
+  gap: 0.7rem;
   margin-top: 1rem;
 }
 .social-links a {
   display: grid;
-  width: 2rem;
-  height: 2rem;
+  width: 2.95rem;
+  height: 2.55rem;
   place-items: center;
   border: 1px solid #638276;
-  border-radius: 50%;
+  border-radius: 60%;
   color: #fff !important;
   font-size: 0.8rem;
+  gap: 20px;
+}
+.social-links svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+  stroke: none;
+}
+.social-links .social-icon-outline {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.11;
 }
 .social-links a:hover {
-  border-color: var(--primary-color);
-  background: var(--primary-color);
+  /* border-color: var(--primary-color); */
+  /* background: var(--primary-color); */
   transform: translateY(-3px);
 }
 .newsletter-form {
