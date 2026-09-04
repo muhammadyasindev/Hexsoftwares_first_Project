@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>
+      Create Blog | BlogSphere
+    </title>
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <a
+        class="brand"
+        href="index.html"
+      >
+        <span class="brand-mark"
+          >✦</span
+        >
+        BlogSphere
+      </a>
+      <button
+        class="menu-toggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <nav
+        class="site-nav"
+        aria-label="Main navigation"
+      >
+        <a href="index.html">Home</a>
+        <a href="blogs.html">Blogs</a>
+        <a
+          class="active"
+          href="create-blog.html"
+          >Create Blog</a
+        >
+        <a href="about.html">About</a>
+        <a href="contact.html"
+          >Contact</a
+        >
+      </nav>
+    </header>
+    <main class="page-content">
+      <p class="eyebrow">
+        Make something meaningful
+      </p>
+      <h1>Share Your Story</h1>
+      <p class="intro">
+        Write something valuable and
+        share your ideas with the
+        community.
+      </p>
+      <div class="editor-layout">
+        <form
+          id="create-blog-form"
+          class="form"
+          novalidate
+        >
+          <label for="title"
+            >Blog Title</label
+          >
+          <input
+            id="title"
+            name="title"
+            type="text"
+            required
+          />
+          <label for="author"
+            >Author Name</label
+          >
+          <input
+            id="author"
+            name="author"
+            type="text"
+            required
+          />
+          <label for="category"
+            >Category</label
+          >
+          <input
+            id="category"
+            name="category"
+            type="text"
+            placeholder="Technology, Travel, Ideas..."
+            required
+          />
+          <label for="image"
+            >Image URL</label
+          >
+          <input
+            id="image"
+            name="image"
+            type="url"
+            placeholder="https://example.com/image.jpg"
+          />
+          <label for="content"
+            >Blog Content</label
+          >
+          <textarea
+            id="content"
+            name="content"
+            rows="10"
+            maxlength="3000"
+            required
+          ></textarea>
+          <div class="form-footer">
+            <small id="character-count"
+              >0 / 3000</small
+            >
+            <button
+              class="button"
+              type="submit"
+            >
+              Publish Blog
+            </button>
+          </div>
+          <p
+            id="form-message"
+            class="form-message"
+            role="status"
+          ></p>
+        </form>
+        <aside class="preview-panel">
+          <p class="eyebrow">
+            Live preview
+          </p>
+          <h2>Blog Preview</h2>
+          <article
+            id="blog-preview"
+            class="blog-card preview-card"
+          >
+            <div class="card-body">
+              <span class="category"
+                >Your category</span
+              >
+              <h2>Your blog title</h2>
+              <p>
+                Your story preview will
+                appear here as you type.
+              </p>
+              <div class="card-meta">
+                <span
+                  >By Your name</span
+                >
+                <span>Today</span>
+              </div>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <a
+            class="footer-brand"
+            href="index.html"
+            ><span>✦</span>
+            BlogSphere</a
+          >
+          <p>
+            Discover ideas, share
+            stories, and inspire others.
+          </p>
+          <div class="social-links">
+            <a
+              href="#"
+              aria-label="Facebook"
+              >f</a
+            ><a
+              href="#"
+              aria-label="Instagram"
+              >◎</a
+            ><a
+              href="#"
+              aria-label="Twitter"
+              >𝕏</a
+            ><a
+              href="#"
+              aria-label="LinkedIn"
+              >in</a
+            >
+          </div>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a
+          ><a href="blogs.html">Blogs</a
+          ><a href="create-blog.html"
+            >Create Blog</a
+          ><a href="about.html">About</a
+          ><a href="contact.html"
+            >Contact</a
+          >
+        </div>
+        <div>
+          <h3>Categories</h3>
+          <a
+            href="blogs.html?category=Technology"
+            >Technology</a
+          ><a
+            href="blogs.html?category=Programming"
+            >Programming</a
+          ><a
+            href="blogs.html?category=Education"
+            >Education</a
+          ><a
+            href="blogs.html?category=Travel"
+            >Travel</a
+          ><a
+            href="blogs.html?category=Productivity"
+            >Productivity</a
+          >
+        </div>
+        <div>
+          <h3>Stay Updated</h3>
+          <p>
+            Subscribe to receive the
+            latest stories.
+          </p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Your email address"
+              aria-label="Email address"
+              required
+            /><button
+              class="button"
+              type="submit"
+            >
+              Subscribe</button
+            ><small
+              class="newsletter-message"
+            ></small>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span
+          >© 2026 BlogSphere. All
+          rights reserved.</span
+        ><span
+          >Built with HTML, CSS &
+          JavaScript</span
+        >
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/create-blog.js"></script>
+  </body>
+</html>
